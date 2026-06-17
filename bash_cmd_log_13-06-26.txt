@@ -1,0 +1,439 @@
+Dushyant@Maykr-Desk MINGW64 ~
+$ ls
+ -1.14-windows.xml
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{01f1b13c-b013-11ef-9d77-eda45039b786}.TxR.0.regtrans-ms
+ NTUSER.DAT{01f1b13c-b013-11ef-9d77-eda45039b786}.TxR.1.regtrans-ms
+ NTUSER.DAT{01f1b13c-b013-11ef-9d77-eda45039b786}.TxR.2.regtrans-ms
+ NTUSER.DAT{01f1b13c-b013-11ef-9d77-eda45039b786}.TxR.blf
+ NTUSER.DAT{01f1b13d-b013-11ef-9d77-eda45039b786}.TM.blf
+ NTUSER.DAT{01f1b13d-b013-11ef-9d77-eda45039b786}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{01f1b13d-b013-11ef-9d77-eda45039b786}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ansel/
+ eclipse/
+ eclipse-workspace/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ source/
+
+Dushyant@Maykr-Desk MINGW64 ~
+$ cd ..
+
+Dushyant@Maykr-Desk MINGW64 /c/Users
+$ cd dushyant/desktop/development/github_projects/mediasys.practice
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice
+$ git clone https://github.com/dushyant-saha/mediasys.practice.git
+Cloning into 'mediasys.practice'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice
+$ cd ..
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects
+$ git clone https://github.com/dushyant-saha/mediasys.practice.git
+fatal: destination path 'mediasys.practice' already exists and is not an empty directory.
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects
+$ cd mediasys.practice
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice
+$ git init
+Initialized empty Git repository in C:/Users/Dushyant/Desktop/Development/Github_Projects/mediasys.practice/.git/
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git remote origin https://github.com/dushyant-saha/mediasys.practice.git
+error: unknown subcommand: `origin'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git remote add origin https://github.com/dushyant-saha/mediasys.practice.git
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git remote -v
+origin  https://github.com/dushyant-saha/mediasys.practice.git (fetch)
+origin  https://github.com/dushyant-saha/mediasys.practice.git (push)
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dushyant-saha/mediasys.practice.git'
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git push origin main^C
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ ^C
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git branch
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git remote -v
+origin  https://github.com/dushyant-saha/mediasys.practice.git (fetch)
+origin  https://github.com/dushyant-saha/mediasys.practice.git (push)
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        AniMixPlay - Goodbye..html
+        AniMixPlay - Goodbye._files/
+        bash_commands_1.png
+        bash_commands_2026-06-13_2.png
+        mediasys.practice/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (master)
+$ git branch -M main
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dushyant-saha/mediasys.practice.git'
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git add .
+warning: in the working copy of 'AniMixPlay - Goodbye..html', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: mediasys.practice
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> mediasys.practice
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached mediasys.practice
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   AniMixPlay - Goodbye..html
+        new file:   AniMixPlay - Goodbye._files/9ani.webp
+        new file:   AniMixPlay - Goodbye._files/allani.webp
+        new file:   AniMixPlay - Goodbye._files/anilist.webp
+        new file:   AniMixPlay - Goodbye._files/chiaki.webp
+        new file:   AniMixPlay - Goodbye._files/comick.webp
+        new file:   AniMixPlay - Goodbye._files/cr.webp
+        new file:   AniMixPlay - Goodbye._files/disqus.webp
+        new file:   AniMixPlay - Goodbye._files/end.min.js.download
+        new file:   AniMixPlay - Goodbye._files/fonts.min.css
+        new file:   AniMixPlay - Goodbye._files/gogo.webp
+        new file:   AniMixPlay - Goodbye._files/jikan.webp
+        new file:   AniMixPlay - Goodbye._files/kawaiifu.webp
+        new file:   AniMixPlay - Goodbye._files/lchart.webp
+        new file:   AniMixPlay - Goodbye._files/logo.webp
+        new file:   AniMixPlay - Goodbye._files/mal.webp
+        new file:   AniMixPlay - Goodbye._files/mangar.png
+        new file:   AniMixPlay - Goodbye._files/pahe.webp
+        new file:   AniMixPlay - Goodbye._files/reddit.webp
+        new file:   AniMixPlay - Goodbye._files/rush.webp
+        new file:   AniMixPlay - Goodbye._files/style.min.css
+        new file:   AniMixPlay - Goodbye._files/zoro.webp
+        new file:   bash_commands_2026-06-13_1.png
+        new file:   bash_commands_2026-06-13_2.png
+        new file:   mediasys.practice
+
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git rm --cached mediasys.practice
+error: the following file has staged content different from both the
+file and the HEAD:
+    mediasys.practice
+(use -f to force removal)
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git rm --cached -f mediasys.practice
+rm 'mediasys.practice'
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   AniMixPlay - Goodbye..html
+        new file:   AniMixPlay - Goodbye._files/9ani.webp
+        new file:   AniMixPlay - Goodbye._files/allani.webp
+        new file:   AniMixPlay - Goodbye._files/anilist.webp
+        new file:   AniMixPlay - Goodbye._files/chiaki.webp
+        new file:   AniMixPlay - Goodbye._files/comick.webp
+        new file:   AniMixPlay - Goodbye._files/cr.webp
+        new file:   AniMixPlay - Goodbye._files/disqus.webp
+        new file:   AniMixPlay - Goodbye._files/end.min.js.download
+        new file:   AniMixPlay - Goodbye._files/fonts.min.css
+        new file:   AniMixPlay - Goodbye._files/gogo.webp
+        new file:   AniMixPlay - Goodbye._files/jikan.webp
+        new file:   AniMixPlay - Goodbye._files/kawaiifu.webp
+        new file:   AniMixPlay - Goodbye._files/lchart.webp
+        new file:   AniMixPlay - Goodbye._files/logo.webp
+        new file:   AniMixPlay - Goodbye._files/mal.webp
+        new file:   AniMixPlay - Goodbye._files/mangar.png
+        new file:   AniMixPlay - Goodbye._files/pahe.webp
+        new file:   AniMixPlay - Goodbye._files/reddit.webp
+        new file:   AniMixPlay - Goodbye._files/rush.webp
+        new file:   AniMixPlay - Goodbye._files/style.min.css
+        new file:   AniMixPlay - Goodbye._files/zoro.webp
+        new file:   bash_commands_2026-06-13_1.png
+        new file:   bash_commands_2026-06-13_2.png
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mediasys.practice/
+
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dushyant-saha/mediasys.practice.git'
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git commit -m "Initial practice commit"
+[main (root-commit) 09ab3a7] Initial practice commit
+ 24 files changed, 85 insertions(+)
+ create mode 100644 AniMixPlay - Goodbye..html
+ create mode 100644 AniMixPlay - Goodbye._files/9ani.webp
+ create mode 100644 AniMixPlay - Goodbye._files/allani.webp
+ create mode 100644 AniMixPlay - Goodbye._files/anilist.webp
+ create mode 100644 AniMixPlay - Goodbye._files/chiaki.webp
+ create mode 100644 AniMixPlay - Goodbye._files/comick.webp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From https://github.com/dushyant-saha/mediasys.practice
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mediasys.practice/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git add .
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git push -u origin main
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (29/29), 91.97 KiB | 10.22 MiB/s, done.
+Total 29 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/dushyant-saha/mediasys.practice.git
+   e91d73a..659db4b  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git show --name-only
+commit 659db4bd82dd6347810f42c1134d1c01b27993df (HEAD -> main, origin/main, origin/HEAD)
+Merge: 09ab3a7 e91d73a
+Author: dushyant-saha <dush28@gmail.com>
+Date:   Sat Jun 13 15:24:08 2026 +0530
+
+    Merge branch 'main' of https://github.com/dushyant-saha/mediasys.practice
+    Created a project folder locally first then initiatlized it with git but
+    when the online repo was created it had a readme.md as an initial commit
+    hence the unrelated histories
+
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git ls-files
+AniMixPlay - Goodbye..html
+AniMixPlay - Goodbye._files/9ani.webp
+AniMixPlay - Goodbye._files/allani.webp
+AniMixPlay - Goodbye._files/anilist.webp
+AniMixPlay - Goodbye._files/chiaki.webp
+AniMixPlay - Goodbye._files/comick.webp
+AniMixPlay - Goodbye._files/cr.webp
+AniMixPlay - Goodbye._files/disqus.webp
+AniMixPlay - Goodbye._files/end.min.js.download
+AniMixPlay - Goodbye._files/fonts.min.css
+AniMixPlay - Goodbye._files/gogo.webp
+AniMixPlay - Goodbye._files/jikan.webp
+AniMixPlay - Goodbye._files/kawaiifu.webp
+AniMixPlay - Goodbye._files/lchart.webp
+AniMixPlay - Goodbye._files/logo.webp
+AniMixPlay - Goodbye._files/mal.webp
+AniMixPlay - Goodbye._files/mangar.png
+AniMixPlay - Goodbye._files/pahe.webp
+AniMixPlay - Goodbye._files/reddit.webp
+AniMixPlay - Goodbye._files/rush.webp
+AniMixPlay - Goodbye._files/style.min.css
+AniMixPlay - Goodbye._files/zoro.webp
+README.md
+bash_commands_2026-06-13_1.png
+bash_commands_2026-06-13_2.png
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
+$ git log
+commit 659db4bd82dd6347810f42c1134d1c01b27993df (HEAD -> main, origin/main, origin/HEAD)
+Merge: 09ab3a7 e91d73a
+Author: dushyant-saha <dush28@gmail.com>
+Date:   Sat Jun 13 15:24:08 2026 +0530
+
+    Merge branch 'main' of https://github.com/dushyant-saha/mediasys.practice
+    Created a project folder locally first then initiatlized it with git but
+    when the online repo was created it had a readme.md as an initial commit
+    hence the unrelated histories
+
+commit 09ab3a7f5153eb2c1e58aa662b7acdf9245e401b
+Author: dushyant-saha <dush28@gmail.com>
+Date:   Sat Jun 13 14:57:41 2026 +0530
+
+    Initial practice commit
+
+commit e91d73a8c95fa46653d99292c7d4306cfb95ad49
+Author: Dushyant Saha <115875935+dushyant-saha@users.noreply.github.com>
+Date:   Sat Jun 13 14:15:24 2026 +0530
+
+    Initial commit
+
+Dushyant@Maykr-Desk MINGW64 /c/Users/dushyant/desktop/development/github_projects/mediasys.practice (main)
