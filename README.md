@@ -22,11 +22,11 @@ A. Steps to upload to GitHub in case of locally initialized project:
 
 
 B. React setup: {
-    What is React.js?
-    ->  it is a javascript library used to build user interfaces in a far more flexible and efficient way than most available web tech
-
+    What is React.js? ->  it is a JS library used to build U.I in a far more flexible and efficient way than most available web tech.
+    Importance of react -> react.js allows us to reuse pieces of code by storing them as functions, these functions are called as components.
 }
-    1. Adding a react library: {
+
+    1. Adding a react library: 
         a. add core react library script
             <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
             <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -34,7 +34,7 @@ B. React setup: {
         b. Add a custom script file as a tag in my html eg: <script type="text/javascript" src="js/app.js"></script>
         
         c. the above order of adding script tags should be maintained
-    }
+
     2. Install Babel extension from VS code: {Babel extension details: publisher: Michael McDermott}
 
 
