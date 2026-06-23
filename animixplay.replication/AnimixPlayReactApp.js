@@ -1,5 +1,4 @@
-
-
+// Practicing creating a react component replicating a webpage AnimixPlay
 const alternatives = React.createElement(
     "div",
     null,
@@ -79,6 +78,27 @@ const alternatives = React.createElement(
     React.createElement("br")
 );
 
+const credits = React.createElement(
+    "h3",
+    null,
+    "Credits"
+);
+const sourcesParagraph = React.createElement(
+    "p",
+    null,
+    "Any content in AniMixPlay was taken from another websites, therefore you should still be able to find the same content in original sites where we scrape it from below :"
+);
+const boxAffiliation = React.createElement(
+    "div",
+    {
+        style: {
+            color: "gray",
+            fontSize: "13px"
+        }
+    },
+    "*Websites listed below are NOT affiliated with us, we just use their public services or scrape their content."
+);
+
 const root = React.createElement(
     React.Fragment,
     null,
@@ -120,7 +140,10 @@ const root = React.createElement(
     ),
     React.createElement("h3", null, "Alternative sites"),
     React.createElement("p", null, "Other websites to stream anime :"),
-    alternatives
+    alternatives,
+    
+    sourcesParagraph,
+    boxAffiliation
 );
 
 ReactDOM.render(
