@@ -178,7 +178,7 @@ Class components are the only components where states are available; here I will
 const name = 'Joe';
 const Heading = (props) => {
   return (
-    <h1 id='abc'>{props.heading}</h1>
+    <h1 className={props.className} >{props.heading}</h1>
   );
 };
 const Paragraph = () => {
@@ -201,13 +201,13 @@ const Paragraph = () => {
 
   changeState(color){
     console.log(color);
-    this.state.color = color;
+    this.setState({color:color});
   }
 
   render() {
     return (
       <div className="box">
-        <Heading heading={this.props.heading} />
+        <Heading heading={this.props.heading} className={this.state.color}/>
         <Paragraph />
         <button onClick={()=>{this.changeState("red")}}>Red</button>
         <button onClick={()=>{this.changeState("green")}}>Green</button>
