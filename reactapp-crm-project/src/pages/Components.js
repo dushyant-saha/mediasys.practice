@@ -1,6 +1,6 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import  React,{ useState, useEffect} from 'react';
+import './../App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from 'react';
 
 // Bootstrap Component
 class Grid extends React.Component {
@@ -24,29 +24,10 @@ class Grid extends React.Component {
 }
 
 /** */
-const Accordion = () => {
+const Accordion = ({ children, id }) => {
   return (
-    <div className="accordion">
-      <div className="accordion-item">
-        <h2 className="accordion-header">
-          <button
-            className="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-          >
-            Accordion Item
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          className="accordion-collapse collapse show"
-        >
-          <div className="accordion-body">
-            Content
-          </div>
-        </div>
-      </div>
+    <div className="accordion" id={id} data-bs-theme="dark">
+      {children}
     </div>
   );
 };
@@ -203,29 +184,32 @@ const ListGroup = () => {
 
 const Modal = () => {
   return (
-    <div
-      className="modal fade"
-      id="exampleModal"
-      tabIndex="-1"
-    >
-      <div className="modal-dialog">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">
-              Modal
-            </h5>
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="modal"
-            />
-          </div>
-          <div className="modal-body">
-            Content
+    <section className='modal-box'>
+      {/* Modal  */}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+      {/* Modal */}
+      <div className="modal fade" id="exampleModal" tabIndex="-1">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">
+                Modal
+              </h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" />
+            </div>
+            <div className="modal-body">
+              Content
+            </div>
+            <div class="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary">Save changes</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -389,12 +373,12 @@ const Counter = () => {
   );
 };
 
-const Clock = ()=>{
-  const [time,setTime] = useState(null);
+const Clock = () => {
+  const [time, setTime] = useState(null);
 
   useEffect(() => {
     // setInterval(()=>{
-      //   const now = new Date();
+    //   const now = new Date();
     //   setTime(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
     // },1000);
     console.log("run")
@@ -407,48 +391,185 @@ const Clock = ()=>{
   );
 };
 
-export const Practice = () => {
+const NewCounter = () => {
+  const [A, updateA] = useState(0);
+
+  return (
+    <button className='btn btn-primary' onClick={() => { updateA(A + 1) }}>
+      <p className='mb-0'>Count: {A}</p>
+    </button>
+  );
+}
+
+function UserData() {
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    // This code runs AFTER the component shows up on the screen
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        setUserData(data);
+        console.log(data)
+      }
+      );
+  }, []); // 👈 The empty array means "only run this once when the page loads"
+
+  return <div>{userData ? userData[0].name : "Loading..."}</div>;
+}
+
+export const ComponentPractice = () => {
   return (
     <section>
-      <section className="react-body">
-        <div className="vr"></div>
-        <Grid></Grid>
+      <div className='custom-row'>
+        <h2 className=''>Grid</h2>
+        <Grid />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Callout</h2>
         <Callout></Callout>
-        <Tooltip></Tooltip>
-        <Accordion ></Accordion>
-        <Accordion />
-        <Alert />
-        <Badge />
-        <Breadcrumb />
-        <Button />
-        <ButtonGroup />
-        <Card />
-        <Carousel />
-        <CloseButton />
-        <Collapse />
-        <Dropdown />
-        <ListGroup />
-        <Modal />
-        <NavTabs />
-        <Offcanvas />
-        <Pagination />
-        <Placeholder />
-        <Popover />
-        <Progress />
-        <Scrollspy />
-        <Spinner />
-        <Toast />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Tooltip</h2>
         <Tooltip />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Accordion</h2>
+        <Accordion id="accordionExample">
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Accordion Item
+              </button>
+            </h2>
+            <div id="collapseOne" className="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                Content
+              </div>
+            </div>
+          </div>
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Accordion Item
+              </button>
+            </h2>
+            <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                Content
+              </div>
+            </div>
+          </div>
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Accordion Item
+              </button>
+            </h2>
+            <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                Content
+              </div>
+            </div>
+          </div>
+        </Accordion>
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Alert</h2>
+        <Alert />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Badge</h2>
+        <Badge />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Breadcrumb</h2>
+        <Breadcrumb />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Button</h2>
+        <Button />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>ButtonGroup</h2>
+        <ButtonGroup />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Card</h2>
+        <Card />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Carousel</h2>
+        <Carousel />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>CloseButton</h2>
+        <CloseButton />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Collapse</h2>
+        <Collapse />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Dropdown</h2>
+        <Dropdown />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>ListGroup</h2>
+        <ListGroup />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Modal</h2>
+        <Modal />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>NavTabs</h2>
+        <NavTabs />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Offcanvas</h2>
+        <Offcanvas />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Pagination</h2>
+        <Pagination />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Placeholder</h2>
+        <Placeholder />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Popover</h2>
+        <Popover />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Progress</h2>
+        <Progress />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Scrollspy</h2>
+        <Scrollspy />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Spinner</h2>
+        <Spinner />
+      </div>
+      <div className='custom-row'>
+        <h2 className='mt-5'>Tooltip</h2>
+        <Tooltip />
+      </div>
+      <div className='custom-row'>
+      </div>
+
+      <section className="react-body">
         <Counter />
-        <Clock/>
+        <Clock />
       </section>
     </section>
   );
 }
 
-export const Home = ()=>{
-  return(<h1>Home Page</h1>);
-};
+
 
 /*========================================================================================================================
 //***DO NOT UNCOMMENT*** This is default create-react-app project code which is redundant:

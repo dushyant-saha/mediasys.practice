@@ -1,7 +1,11 @@
+//React Hooks imports
 import React, { useState, useEffect } from 'react';
+//React Router imports
 import { createBrowserRouter, RouterProvider, Outlet, Link } from 'react-router-dom';
-import {Home, Navbar, Practice} from './Components';
-import RootLayout from './RootLayout';
+//Component imports
+import {Navbar, ComponentPractice} from './pages/Components';
+import RootLayout from './pages/RootLayout';
+import {Home} from './pages/Home';
 
 
 
@@ -18,7 +22,7 @@ const router = createBrowserRouter([
         element: <RootLayout />, // A layout wrapper (more on this below)
         children: [
             { path: '/', element: <Home/> },
-            { path: '/component_list', element: <Practice/> },
+            { path: '/practice-components', element: <ComponentPractice/> },
             { path: '/about', element: <About/> },
         ],
     },
