@@ -1,64 +1,8 @@
-// import logo from './logo.svg';
-import logo from './logo.png'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  React,{ useState, useEffect} from 'react';
-import bootstrap from 'bootstrap'
-import { Link } from 'react-router-dom';
 
-/**Navbar components: */
-const Navlink = (props) => {
-  return (
-    <li className="nav-item">
-      <a className="nav-link" href="#">{props.title}</a>
-    </li>
-  );
-}
-
-const Navdropdown = (props) => {
-  return (
-    <li className="nav-item dropdown ">
-      <a className={"nav-link dropdown-toggle " + props.style} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        {props.title}
-      </a>
-      <ul className="dropdown-menu">
-        <li><a className="dropdown-item">Login Actions</a></li>
-        <li><hr className="dropdown-divider" /></li>
-        <li><a className="dropdown-item" href="#">Sign Up</a></li>
-        <li><a className="dropdown-item" href="#">Sign In</a></li>
-        <li><a className="dropdown-item" href="#">Logout</a></li>
-      </ul>
-    </li>
-  );
-}
-
-const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#"><img src={logo} className="logo"></img></a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          {/* I must add navbar items in the ul below:*******************/}
-          <ul className="navbar-nav mb-2 mb-lg-0">
-            <Navlink title="Daily Activity"></Navlink>
-            <Navlink title="Support Case"></Navlink>
-            <Navlink title="Inventory Register"></Navlink>
-            <Navdropdown style="login" title={<svg xmlns="http://www.w3.org/2000/svg" height="16" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-            </svg>}>
-            </Navdropdown>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-
+// Bootstrap Component
 class Grid extends React.Component {
   render() {
     return (
@@ -427,8 +371,6 @@ const Tooltip = () => {
 
 /** */
 
-
-
 class Callout extends React.Component {
   render() {
     return (
@@ -451,11 +393,11 @@ const Clock = ()=>{
   const [time,setTime] = useState(null);
 
   useEffect(() => {
-    setInterval(()=>{
-      const now = new Date();
-      setTime(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
-    },1000);
-
+    // setInterval(()=>{
+      //   const now = new Date();
+    //   setTime(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
+    // },1000);
+    console.log("run")
     setTime()
   }, []);
   return (
@@ -465,10 +407,9 @@ const Clock = ()=>{
   );
 };
 
-const App = () => {
+export const Practice = () => {
   return (
     <section>
-      <Navbar></Navbar>
       <section className="react-body">
         <div className="vr"></div>
         <Grid></Grid>
@@ -505,6 +446,10 @@ const App = () => {
   );
 }
 
+export const Home = ()=>{
+  return(<h1>Home Page</h1>);
+};
+
 /*========================================================================================================================
 //***DO NOT UNCOMMENT*** This is default create-react-app project code which is redundant:
 ========================================================================================================================
@@ -536,4 +481,5 @@ class Name extends React.Component{
  }
 */
 
-export default App;
+// export default App;
+// export default {Navbar, Home};
